@@ -37,4 +37,9 @@
    (next (iter iterable))
    (catch [e StopIteration]
      None)))
-  
+
+(defn last [iterable]
+  (setv ret None)
+  (for (element iterable)
+    (setv ret element))
+  ret)

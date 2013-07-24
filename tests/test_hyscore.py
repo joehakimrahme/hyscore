@@ -55,9 +55,15 @@ class HyscoreTest(unittest.TestCase):
         result = hyscore.head(range(10))
         self.assertEqual(result, 0)
 
-        result = hyscore.head(iter([]))
+        result = hyscore.head([])
         self.assertIsNone(result)
 
+    def test_last(self):
+        result = hyscore.last(range(10))
+        self.assertEqual(result, 9)
+
+        result = hyscore.last([])
+        self.assertIsNone(result)
 
 if __name__ == "__main__":
     unittest.main()

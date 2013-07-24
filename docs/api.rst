@@ -97,3 +97,12 @@ head
 
 `head` takes one argument, an iterable, and returns its first element. If the
 iterable is empty, it returns None.
+
+last
+----
+
+`last` takes one argument, an iterable, and returns its last element. If the
+iterable is empty it returns None.
+
+.. note:: `last` will not check that the iteration terminates. If you feed it an
+	  infinite generator, you're creating an infinite loop.
