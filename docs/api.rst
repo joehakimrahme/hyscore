@@ -77,3 +77,17 @@ fold-right
 	  `fold-left` for associative operations like addition or
 	  multiplication. They will behave differently, for example, for
 	  substraction or division.
+
+reject
+------
+
+`reject` takes 2 arguments, a predicate and an iterable, and returns a
+generator. This generator successively yields all the values that fail the
+predicate.
+
+Here's a similar implementation of `reject` in Python:
+
+.. code-block:: python
+
+   def reject(predicate, iterable):
+       return (element for element in iterable if not predicate(element))

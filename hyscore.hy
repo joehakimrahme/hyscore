@@ -26,3 +26,8 @@
        (setv ret element)
        (break))))
   ret)
+
+(defn reject [predicate iterable]
+  (for (element iterable)
+    (if (not (predicate element))
+      (yield element))))

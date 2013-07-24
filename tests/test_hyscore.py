@@ -47,6 +47,10 @@ class HyscoreTest(unittest.TestCase):
         result = hyscore.fold_right(operator.sub, [], 1000)
         self.assertEqual(result, 1000)
 
+    def test_reject(self):
+        result = hyscore.reject(lambda x: x > 5, range(10))
+        self.assertEqual(list(result), range(6))
+
 
 if __name__ == "__main__":
     unittest.main()
