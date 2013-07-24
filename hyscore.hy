@@ -31,3 +31,10 @@
   (for (element iterable)
     (if (not (predicate element))
       (yield element))))
+
+(defn head [iterable]
+  (try
+   (next (iter iterable))
+   (catch [e StopIteration]
+     None)))
+  

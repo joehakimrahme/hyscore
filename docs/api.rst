@@ -91,3 +91,9 @@ Here's a similar implementation of `reject` in Python:
 
    def reject(predicate, iterable):
        return (element for element in iterable if not predicate(element))
+
+head
+----
+
+`head` takes one argument, an iterable, and returns its first element. If the
+iterable is empty, it returns None.
